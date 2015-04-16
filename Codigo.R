@@ -2,7 +2,7 @@
 ### Encoding: UTF-8
 
 ###################################################
-### code chunk number 1: Documento.Rnw:61-66
+### code chunk number 1: Documento.Rnw:65-70
 ###################################################
 x <- 2 + 11 # se guarda una operacion en el objeto x
 x
@@ -12,7 +12,7 @@ ls() # se listan los objetos en la memoria
 
 
 ###################################################
-### code chunk number 2: Documento.Rnw:71-75
+### code chunk number 2: Documento.Rnw:75-79
 ###################################################
 options(digits = 16)
 sqrt(2) # raiz cuadrada de 2
@@ -21,7 +21,7 @@ pi # pi
 
 
 ###################################################
-### code chunk number 3: Documento.Rnw:94-104
+### code chunk number 3: Documento.Rnw:98-108
 ###################################################
 x <- 57
 typeof(x)
@@ -36,7 +36,7 @@ typeof(5 + 3i) # numero complejo
 
 
 ###################################################
-### code chunk number 4: Documento.Rnw:113-119
+### code chunk number 4: Documento.Rnw:117-123
 ###################################################
 vec.1 <- c(1, -1, 0, 2, 0, 3)
 vec.1 # vector numerico
@@ -47,14 +47,14 @@ class(vec.2) # vector de caracteres
 
 
 ###################################################
-### code chunk number 5: Documento.Rnw:124-126
+### code chunk number 5: Documento.Rnw:128-130
 ###################################################
 seq(from = 5, to = 20, by = 3)
 7:11
 
 
 ###################################################
-### code chunk number 6: Documento.Rnw:131-136
+### code chunk number 6: Documento.Rnw:135-140
 ###################################################
 mat.1 <- matrix(data = vec.1, ncol = 2, byrow = TRUE)
 mat.1
@@ -64,7 +64,7 @@ class(mat.1) # clase matriz
 
 
 ###################################################
-### code chunk number 7: Documento.Rnw:141-144
+### code chunk number 7: Documento.Rnw:145-148
 ###################################################
 par(mfrow=c(1,2))
 plot(mat.1)
@@ -72,14 +72,14 @@ plot(vec.1)
 
 
 ###################################################
-### code chunk number 8: Documento.Rnw:149-151
+### code chunk number 8: Documento.Rnw:153-155
 ###################################################
 str(mat.1)
 str(vec.1)
 
 
 ###################################################
-### code chunk number 9: Documento.Rnw:156-160
+### code chunk number 9: Documento.Rnw:160-164
 ###################################################
 vec.1
 vec.1[2]
@@ -88,26 +88,26 @@ vec.1[-2]
 
 
 ###################################################
-### code chunk number 10: Documento.Rnw:165-167
+### code chunk number 10: Documento.Rnw:169-171
 ###################################################
 mat.1[1,2] # componente fila 1 y columna 2
 mat.1[,2] # segunda columna
 
 
 ###################################################
-### code chunk number 11: Documento.Rnw:174-175
+### code chunk number 11: Documento.Rnw:178-179
 ###################################################
 setwd("~/Dropbox/ITAM/SERVICIO SOCIAL")
 
 
 ###################################################
-### code chunk number 12: Documento.Rnw:177-178
+### code chunk number 12: Documento.Rnw:181-182
 ###################################################
 mis.datos <- read.table("CASAS.txt", header=TRUE)
 
 
 ###################################################
-### code chunk number 13: Documento.Rnw:183-186
+### code chunk number 13: Documento.Rnw:187-190
 ###################################################
 head(mis.datos) # muestra 6 observaciones
 nrow(mis.datos) # observaciones
@@ -115,7 +115,7 @@ ncol(mis.datos) # variables
 
 
 ###################################################
-### code chunk number 14: Documento.Rnw:194-197
+### code chunk number 14: Documento.Rnw:198-201
 ###################################################
 vec.1[c(1,4,5)] # indices que no son consecutivos
 a <- c(1,3,2) # tambien se puede en desorden
@@ -123,14 +123,14 @@ vec.1[a]
 
 
 ###################################################
-### code chunk number 15: Documento.Rnw:202-204
+### code chunk number 15: Documento.Rnw:206-208
 ###################################################
 a.2 <- vec.1 > 0 # vector con TRUE donde cumple y FALSE donde no 
 vec.1[a.2] # los elementos cuyo indice tiene TRUE en a.2
 
 
 ###################################################
-### code chunk number 16: Documento.Rnw:209-217
+### code chunk number 16: Documento.Rnw:213-221
 ###################################################
 mat.1[1,2] # un elemento
 mat.1[c(1,2), ] # dos renglones, todas las columans
@@ -143,7 +143,7 @@ vec.3[1:20]
 
 
 ###################################################
-### code chunk number 17: Documento.Rnw:222-225
+### code chunk number 17: Documento.Rnw:226-229
 ###################################################
 indice <- mis.datos[ , 6] > 0 # ST > 0
 sub.datos <- mis.datos[indice, ] # nuevo objeto
@@ -151,7 +151,7 @@ nrow(sub.datos)
 
 
 ###################################################
-### code chunk number 18: Documento.Rnw:230-234
+### code chunk number 18: Documento.Rnw:234-238
 ###################################################
 impuesto <- mis.datos$TAX # columna con titulo TAX
 head(impuesto)
@@ -160,7 +160,7 @@ aux
 
 
 ###################################################
-### code chunk number 19: Documento.Rnw:243-246
+### code chunk number 19: Documento.Rnw:247-250
 ###################################################
 sum(vec.1) # suma
 max(vec.1) # maximo
@@ -168,20 +168,20 @@ mean(vec.1) # promedio
 
 
 ###################################################
-### code chunk number 20: Documento.Rnw:253-255
+### code chunk number 20: Documento.Rnw:257-259
 ###################################################
 sort(vec.1) # ordena
 sort(vec.1, decreasing = TRUE) # ordena de mayor a menor
 
 
 ###################################################
-### code chunk number 21: Documento.Rnw:260-261
+### code chunk number 21: Documento.Rnw:264-265
 ###################################################
 sort
 
 
 ###################################################
-### code chunk number 22: Documento.Rnw:266-272
+### code chunk number 22: Documento.Rnw:270-276
 ###################################################
 mayor <- function(x, y=1){
   z <- max(x,y)
@@ -192,54 +192,61 @@ mayor(-3)
 
 
 ###################################################
-### code chunk number 23: Documento.Rnw:280-281
+### code chunk number 23: Documento.Rnw:286-288
 ###################################################
 library(ggplot2)
+ggplot(mis.datos, aes(x=FLR,Price)) + geom_line()
 
 
 ###################################################
-### code chunk number 24: Documento.Rnw:307-308
+### code chunk number 24: Documento.Rnw:293-294
+###################################################
+ggplot(mis.datos, aes(x=FLR,Price)) + geom_point()
+
+
+###################################################
+### code chunk number 25: Documento.Rnw:317-318
 ###################################################
 rm(list=ls())
 
 
 ###################################################
-### code chunk number 25: Documento.Rnw:322-324
+### code chunk number 26: Documento.Rnw:332-334
 ###################################################
 x <- c(0,1,2,3)
 f <- c(1/8, 3/8, 3/8, 1/8)
 
 
 ###################################################
-### code chunk number 26: Documento.Rnw:329-331
+### code chunk number 27: Documento.Rnw:339-341
 ###################################################
 mu <- sum(x * f)
 mu
 
 
 ###################################################
-### code chunk number 27: Documento.Rnw:336-338
+### code chunk number 28: Documento.Rnw:346-348
 ###################################################
 sigma2 <- sum((x-mu)^2 * f)
 sigma2
 
 
 ###################################################
-### code chunk number 28: Documento.Rnw:343-345
+### code chunk number 29: Documento.Rnw:353-355
 ###################################################
 sigma <- sqrt(sigma2)
 sigma
 
 
 ###################################################
-### code chunk number 29: Documento.Rnw:350-352
+### code chunk number 30: Documento.Rnw:360-362
 ###################################################
 F <- cumsum(f)
 F
 
 
 ###################################################
-### code chunk number 30: Documento.Rnw:357-360
+### code chunk number 31: Documento.Rnw:367-370
 ###################################################
 library(distrEx)
 X <- DiscreteDistribution(supp = 0:3, prob = c(1,3,3,1)/8)
@@ -247,7 +254,7 @@ E(X); var(X); sd(X)
 
 
 ###################################################
-### code chunk number 31: Documento.Rnw:375-379
+### code chunk number 32: Documento.Rnw:385-389
 ###################################################
 x <- sample(6, size = 3000, replace = TRUE) # m = 6, 3000 veces
 mean(x) # mu = (6 + 1)/2 = 3.5
@@ -256,7 +263,7 @@ hist(x)
 
 
 ###################################################
-### code chunk number 32: Documento.Rnw:384-388
+### code chunk number 33: Documento.Rnw:394-398
 ###################################################
 x <- sample(30:70, size = 270, replace = TRUE)
 mean(x) # mu = (70 - 30 + 1)/2 + 30 = 50.5
@@ -265,17 +272,17 @@ hist(x)
 
 
 ###################################################
-### code chunk number 33: Documento.Rnw:403-408
+### code chunk number 34: Documento.Rnw:414-419
 ###################################################
 dbinom(2, size = 4, prob = 1/2) # funcion de densidad P(X = 2)
-pbinom(2, size = 4, prob = 1/2) # funcion de distribucion P(X < 2)
+pbinom(2, size = 4, prob = 1/2) # funcion de distribucion P(X <= 2)
 pbinom(9, size = 12, prob = 1/6) - 
-  pbinom(6, size = 12, prob = 1/6) # P(6 < X < 9)
+  pbinom(6, size = 12, prob = 1/6) # P(6 <= X < 9)
 diff(pbinom(c(6,9), size = 12, prob = 1/6)) # lo mismo
 
 
 ###################################################
-### code chunk number 34: Documento.Rnw:413-416
+### code chunk number 35: Documento.Rnw:424-427
 ###################################################
 library(distr)
 X <- Binom(size = 3, prob = 1/2)
@@ -283,20 +290,20 @@ X
 
 
 ###################################################
-### code chunk number 35: Documento.Rnw:421-423
+### code chunk number 36: Documento.Rnw:432-434
 ###################################################
 d(X)(1) # funcion de densidad P(X = 1)
 p(X)(2) # funcion de distribucion P(X < 2)
 
 
 ###################################################
-### code chunk number 36: Documento.Rnw:428-429
+### code chunk number 37: Documento.Rnw:439-440
 ###################################################
 rbinom(10, size = 4, prob = 1/2)
 
 
 ###################################################
-### code chunk number 37: Documento.Rnw:434-451
+### code chunk number 38: Documento.Rnw:445-462
 ###################################################
 bin <- function(n,p){
   return(binr(n,p,n))
@@ -318,7 +325,7 @@ binr <- function(n,p,k){
 
 
 ###################################################
-### code chunk number 38: Documento.Rnw:457-460
+### code chunk number 39: Documento.Rnw:468-471
 ###################################################
 n = 6
 p = 0.4
@@ -326,7 +333,7 @@ bin(n,p) # llamamos a la funcion definida
 
 
 ###################################################
-### code chunk number 39: Documento.Rnw:472-480
+### code chunk number 40: Documento.Rnw:483-491
 ###################################################
 library(moments) # paqueteria para obtener momentos de las variables
 vars <- rbinom(10000, 10, .3) # parametros n, repeticiones y p respectivamente
@@ -339,7 +346,7 @@ mean(vars)^2 + var(vars) # se puede ver la equivalencia
 
 
 ###################################################
-### code chunk number 40: Documento.Rnw:491-504
+### code chunk number 41: Documento.Rnw:502-515
 ###################################################
 poi <- function(n,l){ #Se necesitan n y l
   return(poir(l,n))
@@ -357,22 +364,19 @@ poir <- function(l,k){
 
 
 ###################################################
-### code chunk number 41: Documento.Rnw:509-513
-###################################################
-l = 3.2
-n = 2
-poi(n,l)
-sum(poi(n,l))
-
-
-###################################################
 ### code chunk number 42: Documento.Rnw:520-521
+###################################################
+l <- 3.2; n <- 2; poi(n,l); sum(poi(n,l))
+
+
+###################################################
+### code chunk number 43: Documento.Rnw:530-531
 ###################################################
 set.seed(000118440)
 
 
 ###################################################
-### code chunk number 43: Documento.Rnw:523-526
+### code chunk number 44: Documento.Rnw:533-536
 ###################################################
 n = 10
 prob = 0.4
@@ -380,16 +384,16 @@ X <- rbinom(1000, n, prob)
 
 
 ###################################################
-### code chunk number 44: Documento.Rnw:528-532
+### code chunk number 45: Documento.Rnw:538-542
 ###################################################
   prom.parciales <- cumsum(X)/1:1000
   plot(1:1000, prom.parciales, type='l', col='blue')
-  title('Media de la distribucion Binomial')
+  title('Media de la Distribucion Binomial')
   abline(h=n*prob, col='red')
 
 
 ###################################################
-### code chunk number 45: Documento.Rnw:537-541
+### code chunk number 46: Documento.Rnw:547-551
 ###################################################
 var.parciales <- vector("numeric",1000)
 for (i in 1:1000){
@@ -398,15 +402,15 @@ for (i in 1:1000){
 
 
 ###################################################
-### code chunk number 46: Documento.Rnw:543-546
+### code chunk number 47: Documento.Rnw:553-556
 ###################################################
 plot(1:1000, var.parciales, type='l', col='blue') 
-title('Varianza de la distribucion Binomial')
+title('Varianza de la Distribucion Binomial')
 abline(h=n*prob*(1 - prob), col='red')
 
 
 ###################################################
-### code chunk number 47: Documento.Rnw:548-551
+### code chunk number 48: Documento.Rnw:558-561
 ###################################################
 # POISSON
 lambda <- 1
@@ -414,16 +418,16 @@ X <- rpois(1000,lambda)
 
 
 ###################################################
-### code chunk number 48: Documento.Rnw:553-557
+### code chunk number 49: Documento.Rnw:563-567
 ###################################################
 prom.parciales <- cumsum(X)/1:1000
 plot(1:1000, prom.parciales, type='l',col='blue')
-title('Promedio de la distribucion Poisson') 
+title('Promedio de la Distribucion Poisson') 
 abline(h=lambda, col='red')
 
 
 ###################################################
-### code chunk number 49: Documento.Rnw:559-562
+### code chunk number 50: Documento.Rnw:569-572
 ###################################################
 var.parciales <- vector("numeric",1000)
 for (i in 1:1000)
@@ -431,22 +435,22 @@ for (i in 1:1000)
 
 
 ###################################################
-### code chunk number 50: Documento.Rnw:564-567
+### code chunk number 51: Documento.Rnw:574-577
 ###################################################
 plot(1:1000, var.parciales, type='l', col='blue') 
-title('Varianza de la distribuci\'on Poisson')
+title('Varianza de la Distribucion Poisson')
 abline(h=lambda, col='red')
 
 
 ###################################################
-### code chunk number 51: Documento.Rnw:576-578
+### code chunk number 52: Documento.Rnw:586-588
 ###################################################
-prob <- 75/250000    #estimacion de la probabilidad
+prob <- 75/250000    # estimacion de la probabilidad
 X <- sample(c(0,1), 250000, prob=c(1-prob,prob), replace=TRUE)
 
 
 ###################################################
-### code chunk number 52: Documento.Rnw:583-588
+### code chunk number 53: Documento.Rnw:593-598
 ###################################################
 accidentes <- vector("numeric", 1000)
 for (j in 1:1000) {
@@ -456,7 +460,7 @@ for (j in 1:1000) {
 
 
 ###################################################
-### code chunk number 53: Documento.Rnw:591-594
+### code chunk number 54: Documento.Rnw:601-604
 ###################################################
 Y <- rpois(1000, lambda = 10000*prob)
 table(accidentes)
@@ -464,19 +468,19 @@ table(Y)
 
 
 ###################################################
-### code chunk number 54: comparacion
+### code chunk number 55: comparacion
 ###################################################
 par(mfrow = c(1,3)) # comando para mostrar las 3 graficas en 1 linea
-hist(accidentes,prob=TRUE,main='Histograma de accidentes')
-lines(density(accidentes,adjust=2), col='blue')
-hist(Y,prob=TRUE,main='Histograma de Poisson(n*p)')
+hist(accidentes, prob=TRUE, main='Histograma de Accidentes')
+lines(density(accidentes, adjust=2), col='blue')
+hist(Y, prob=TRUE, main='Histograma de Poisson(n*p)')
 lines(density(Y, adjust=2), col='red')
-plot(density(accidentes,adjust=2),type='l',col='blue',main='Comparacion')
+plot(density(accidentes, adjust=2), type='l', col='blue', main='Comparacion')
 lines(density(Y, adjust=2), col='red')
 
 
 ###################################################
-### code chunk number 55: Documento.Rnw:606-613
+### code chunk number 56: Documento.Rnw:616-623
 ###################################################
 # DISCRETA UNIFORME
 n <- 10
@@ -488,7 +492,7 @@ abline(h=(n+1)/2, col='red')
 
 
 ###################################################
-### code chunk number 56: Documento.Rnw:615-618
+### code chunk number 57: Documento.Rnw:625-628
 ###################################################
 var.parciales <- vector("numeric",1000)
 for (i in 1:1000)
@@ -496,49 +500,49 @@ for (i in 1:1000)
 
 
 ###################################################
-### code chunk number 57: Documento.Rnw:620-623
+### code chunk number 58: Documento.Rnw:630-633
 ###################################################
 plot(1:1000, var.parciales,type='l',col='blue') 
-title('Varianza de la distribucion Discreta Uniforme')
+title('Varianza de la Distribucion Discreta Uniforme')
 abline(h=(n^2-1)/12, col='red') 
 
 
 ###################################################
-### code chunk number 58: Documento.Rnw:634-636
+### code chunk number 59: Documento.Rnw:645-647
 ###################################################
 pgeom(4, prob = 0.812, lower.tail = FALSE) # P(X > x)
 1 - pgeom(4, prob = 0.812) # Default: lower.tail = TRUE, P(X <= 4)
 
 
 ###################################################
-### code chunk number 59: Documento.Rnw:646-647
+### code chunk number 60: Documento.Rnw:657-658
 ###################################################
 dnbinom(5, size = 7, prob = 0.5) 
 
 
 ###################################################
-### code chunk number 60: Documento.Rnw:660-661
+### code chunk number 61: Documento.Rnw:671-672
 ###################################################
 3/10*dhyper(0, 4, 10-4, 3) + 7/10*dhyper(0, 1, 10-1, 3)
 
 
 ###################################################
-### code chunk number 61: Documento.Rnw:686-687
+### code chunk number 62: Documento.Rnw:697-698
 ###################################################
 rm(list=ls())
 
 
 ###################################################
-### code chunk number 62: Documento.Rnw:717-721
+### code chunk number 63: Documento.Rnw:728-732
 ###################################################
-# funci\'on de densidad de probabilidad
+# funcion de densidad de probabilidad
 f <- function(x) 3 * x^2 
 # se integra para sacar la probabilidad deseada
 integrate(f, lower = 0.14, upper = 0.71)
 
 
 ###################################################
-### code chunk number 63: Documento.Rnw:726-730
+### code chunk number 64: Documento.Rnw:737-741
 ###################################################
 library(distr)
 f <- function(x) 3 * x^2
@@ -547,127 +551,132 @@ p(X)(0.71) - p(X)(0.14)
 
 
 ###################################################
-### code chunk number 64: Documento.Rnw:737-741
+### code chunk number 65: Documento.Rnw:748-750
 ###################################################
 library(distrEx)
-E(X) # media
-var(X) # varianza
-3/80 # varianza teorica
+E(X); var(X); 3/80 # media, varianza y varianza teorica
 
 
 ###################################################
-### code chunk number 65: Documento.Rnw:758-759
+### code chunk number 66: Documento.Rnw:767-769
 ###################################################
-hist(runif(1000,-5,5))
+x <- data.frame(var = runif(1000,-5,5))
+ggplot(x, aes(var)) + geom_histogram()
 
 
 ###################################################
-### code chunk number 66: Documento.Rnw:766-769
+### code chunk number 67: Documento.Rnw:776-777
 ###################################################
-x <- runif(1000,0,10)
-mean(x) # E(X) = 5
-var(x) # V(X) = 100/12
+x <- runif(1000,0,10); mean(x); var(x) # E(X) = 5 V(X) = 100/12
 
 
 ###################################################
-### code chunk number 67: Documento.Rnw:777-779
+### code chunk number 68: Documento.Rnw:785-787
 ###################################################
 punif(15, min = 0, max = 30) - punif(10, min = 0, max = 30) + 
   punif(30, min = 0, max = 30) - punif(25, min = 0, max = 30)
 
 
 ###################################################
-### code chunk number 68: Documento.Rnw:794-795
+### code chunk number 69: Documento.Rnw:802-803
 ###################################################
 pnorm(2, mean = 3, sd = sqrt(9), lower.tail = FALSE) - pnorm(5, mean = 3, sd = sqrt(9), lower.tail = FALSE)
 
 
 ###################################################
-### code chunk number 69: Documento.Rnw:800-801
+### code chunk number 70: Documento.Rnw:808-809
 ###################################################
 pnorm(9, mean = 3, sd = sqrt(9), lower.tail = FALSE) + pnorm(-3, mean = 3, sd = sqrt(9), lower.tail = TRUE)
 
 
 ###################################################
-### code chunk number 70: Documento.Rnw:815-816
+### code chunk number 71: Documento.Rnw:823-825
 ###################################################
-hist(rbinom(10, 10, .4))
+x <- data.frame(var = rbinom(10, 10, .4))
+ggplot(x, aes(var)) + geom_histogram(binwidth=1) + xlim(min(x$var), max(x$var))
 
 
 ###################################################
-### code chunk number 71: Documento.Rnw:818-819
+### code chunk number 72: Documento.Rnw:827-829
 ###################################################
-hist(rbinom(50, 10, .4))
+x <- data.frame(var = rbinom(40, 10, .4))
+ggplot(x, aes(var)) + geom_histogram(binwidth=1) + xlim(min(x$var), max(x$var))
 
 
 ###################################################
-### code chunk number 72: Documento.Rnw:821-822
+### code chunk number 73: Documento.Rnw:831-833
 ###################################################
-hist(rbinom(100, 10, .4))
+x <- data.frame(var = rbinom(100, 10, .4))
+ggplot(x, aes(var)) + geom_histogram(binwidth=1) + xlim(min(x$var), max(x$var))
 
 
 ###################################################
-### code chunk number 73: Documento.Rnw:824-825
+### code chunk number 74: Documento.Rnw:835-837
 ###################################################
-hist(rbinom(1000, 10, .4))
+x <- data.frame(var = rbinom(1000, 10, .4))
+ggplot(x, aes(var)) + geom_histogram(binwidth=1) + xlim(min(x$var), max(x$var))
 
 
 ###################################################
-### code chunk number 74: Documento.Rnw:840-841
+### code chunk number 75: Documento.Rnw:852-853
 ###################################################
 pnorm(.16) - pnorm(-.16)
 
 
 ###################################################
-### code chunk number 75: Documento.Rnw:854-855
+### code chunk number 76: Documento.Rnw:866-868
 ###################################################
-hist(rexp(200), breaks=25)
+x <- data.frame(var = rexp(200))
+ggplot(x, aes(var)) + geom_histogram(binwidth=.2, colour = "darkblue", fill = "white") + xlim(min(x$var), max(x$var))
 
 
 ###################################################
-### code chunk number 76: Documento.Rnw:857-858
+### code chunk number 77: Documento.Rnw:870-872
 ###################################################
-hist(rexp(500, 5), breaks=25)
+x <- data.frame(var = rexp(500, 5))
+ggplot(x, aes(var)) + geom_histogram(binwidth=.05, colour = "darkblue", fill = "white") + xlim(min(x$var), max(x$var))
 
 
 ###################################################
-### code chunk number 77: Documento.Rnw:863-864
+### code chunk number 78: Documento.Rnw:877-878
 ###################################################
 x <- rexp(200); mean(x); mean(x)^2; var(x)
 
 
 ###################################################
-### code chunk number 78: Documento.Rnw:866-867
+### code chunk number 79: Documento.Rnw:880-881
 ###################################################
 x <- rexp(500,5); mean(x); mean(x)^2; var(x)
 
 
 ###################################################
-### code chunk number 79: Documento.Rnw:877-878
+### code chunk number 80: Documento.Rnw:891-892
 ###################################################
 pexp(10, rate = 1/10, lower.tail=FALSE)
 
 
 ###################################################
-### code chunk number 80: Documento.Rnw:883-884
+### code chunk number 81: Documento.Rnw:897-898
 ###################################################
 pexp(10, rate = 1/10, lower.tail=FALSE) - pexp(20, rate = 1/10, lower.tail=FALSE)
 
 
 ###################################################
-### code chunk number 81: Documento.Rnw:901-902
+### code chunk number 82: Documento.Rnw:915-917
 ###################################################
-hist(rgamma(200, 5), breaks=25)
+x <- data.frame(var = rgamma(200, 5))
+ggplot(x, aes(var)) + geom_histogram(aes(y = ..density..), binwidth=.5, colour = "darkblue", fill = "white") + xlim(min(x$var), max(x$var)) + geom_density()
 
 
 ###################################################
-### code chunk number 82: Documento.Rnw:904-905
+### code chunk number 83: Documento.Rnw:919-921
 ###################################################
-hist(rgamma(500, 5, 5), breaks=25)
+x <- data.frame(var = rgamma(500, 5, 5))
+ggplot(x, aes(var)) + geom_histogram(aes(y = ..density..), binwidth=.1, colour = "darkblue", fill = "white") + xlim(min(x$var), max(x$var)) + geom_density()
 
 
 ###################################################
-### code chunk number 83: Documento.Rnw:910-914
+### code chunk number 84: Documento.Rnw:926-930
 ###################################################
 n <- 5
 gamma(n); factorial(n-1)
@@ -676,90 +685,29 @@ gamma(n); factorial(n-1)
 
 
 ###################################################
-### code chunk number 84: Documento.Rnw:919-922
+### code chunk number 85: Documento.Rnw:935-938
 ###################################################
-x <- rgamma(500, 1)
-hist(x, breaks=25)
-mean(x); var(x)
+x <- data.frame(var = rgamma(500, 1))
+ggplot(x, aes(var)) + geom_histogram(aes(y = ..density..), binwidth=.1, colour = "darkblue", fill = "blue", alpha = 0.5) + xlim(min(x$var), max(x$var)) + geom_density(fill = 'yellow', alpha = 0.3) + ggtitle('Distr. Gamma')
+mean(x$var); var(x$var)
 
 
 ###################################################
-### code chunk number 85: Documento.Rnw:924-927
+### code chunk number 86: Documento.Rnw:940-943
 ###################################################
-x <- rexp(500)
-hist(x, breaks=25)
-mean(x); var(x)
+x <- data.frame(var = rexp(500))
+ggplot(x, aes(var)) + geom_histogram(aes(y = ..density..), binwidth=.1, colour = "darkblue", fill = "blue", alpha = 0.5) + xlim(min(x$var), max(x$var)) + geom_density(fill = 'yellow', alpha = 0.3) + ggtitle('Distr. Exponencial')
+mean(x$var); var(x$var)
 
 
 ###################################################
-### code chunk number 86: Documento.Rnw:942-943
-###################################################
-hist(rweibull(1000, 1, 1), breaks = 25)
-
-
-###################################################
-### code chunk number 87: Documento.Rnw:945-946
-###################################################
-hist(rweibull(1000, 5, 5), breaks = 25)
-
-
-###################################################
-### code chunk number 88: Documento.Rnw:948-949
-###################################################
-hist(rweibull(1000, .5, 1), breaks = 25)
-
-
-###################################################
-### code chunk number 89: Documento.Rnw:951-952
-###################################################
-hist(rweibull(1000, 1.5, 1), breaks = 25)
-
-
-###################################################
-### code chunk number 90: Documento.Rnw:957-960
-###################################################
-x <- rweibull(1000, 1, 5)
-hist(x, breaks = 25)
-mean(x); var(x)
-
-
-###################################################
-### code chunk number 91: Documento.Rnw:962-965
-###################################################
-x <- rexp(1000, 1/5)
-hist(x, breaks = 25)
-mean(x); var(x)
-
-
-###################################################
-### code chunk number 92: Documento.Rnw:973-975
-###################################################
-x <- data.frame(samples = rcauchy(100))
-ggplot(x, aes(x = samples)) + geom_histogram(aes(y = ..density..), colour = 'darkgreen', fill = 'white') + geom_density(colour = 'blue') + ggtitle('Cauchy Distribution')
-
-
-###################################################
-### code chunk number 93: Documento.Rnw:986-988
-###################################################
-x <- data.frame(samples = rbeta(1000,1,2))
-ggplot(x, aes(x = samples)) + geom_histogram(aes(y = ..density..), colour = 'darkgreen', fill = 'white') + geom_density(colour = 'blue') + ggtitle('Beta Distribution')
-
-
-###################################################
-### code chunk number 94: Documento.Rnw:990-992
-###################################################
-x <- data.frame(samples = rbeta(1000,2,5))
-ggplot(x, aes(x = samples)) + geom_histogram(aes(y = ..density..), colour = 'darkgreen', fill = 'white') + geom_density(colour = 'blue') + ggtitle('Beta Distribution')
-
-
-###################################################
-### code chunk number 95: Documento.Rnw:1025-1026
+### code chunk number 87: Documento.Rnw:1041-1042
 ###################################################
 rm(list=ls())
 
 
 ###################################################
-### code chunk number 96: Documento.Rnw:1059-1066
+### code chunk number 88: Documento.Rnw:1075-1082
 ###################################################
 masa <- function(i,j){
   if(i + j < 4)
@@ -771,7 +719,7 @@ masa <- function(i,j){
 
 
 ###################################################
-### code chunk number 97: Documento.Rnw:1071-1079
+### code chunk number 89: Documento.Rnw:1087-1095
 ###################################################
 options(digits=2)
 m <- matrix(nrow = 4, ncol = 4)
@@ -784,26 +732,26 @@ m
 
 
 ###################################################
-### code chunk number 98: Documento.Rnw:1084-1085
+### code chunk number 90: Documento.Rnw:1100-1101
 ###################################################
 rowSums(m)
 
 
 ###################################################
-### code chunk number 99: Documento.Rnw:1090-1091
+### code chunk number 91: Documento.Rnw:1106-1107
 ###################################################
 colSums(m)
 
 
 ###################################################
-### code chunk number 100: Documento.Rnw:1118-1120
+### code chunk number 92: Documento.Rnw:1132-1134
 ###################################################
 x <- runif(10000, min=-1, max=1)
 y <- runif(10000, min=-1, max=1)
 
 
 ###################################################
-### code chunk number 101: Documento.Rnw:1125-1139
+### code chunk number 93: Documento.Rnw:1139-1153
 ###################################################
 circulo <- 0 # veces que los puntos caen dentro del circulo
 cuadrado <- 0 # veces que los puntos caen fuera del circulo
@@ -822,7 +770,13 @@ for(i in 1:10000){ # para todos los puntos
 
 
 ###################################################
-### code chunk number 102: Documento.Rnw:1154-1165
+### code chunk number 94: Documento.Rnw:1159-1160
+###################################################
+4 * circulo/(circulo+cuadrado)
+
+
+###################################################
+### code chunk number 95: Documento.Rnw:1176-1187
 ###################################################
 n <- 50 # cantidad de exponenciales
 lambda <- .3
@@ -834,17 +788,18 @@ for(j in 1:m){
     x[i] <- rexp(1,lambda)
   xx[j] <- sum(x)
 }
-hist(xx, breaks = 15)
+ggplot(data.frame(var = xx), aes(var)) + geom_histogram(aes(y = ..density..), binwidth=4, colour = "darkblue", fill = "blue", alpha = 0.5) + xlim(min(xx), max(xx)) + geom_density(fill = 'yellow', alpha = 0.3) + ggtitle('Variables Exponenciales')
 
 
 ###################################################
-### code chunk number 103: Documento.Rnw:1167-1168
+### code chunk number 96: Documento.Rnw:1189-1191
 ###################################################
-hist(rgamma(m,n,lambda), breaks = 15)
+x <- data.frame(var = rgamma(m,n,lambda))
+ggplot(x, aes(var)) + geom_histogram(aes(y = ..density..), binwidth=4, colour = "darkblue", fill = "blue", alpha = 0.5) + xlim(min(x$var), max(x$var)) + geom_density(fill = 'yellow', alpha = 0.3) + ggtitle('Distr. Gamma')
 
 
 ###################################################
-### code chunk number 104: Documento.Rnw:1173-1183
+### code chunk number 97: Documento.Rnw:1196-1206
 ###################################################
 n <- 50 # cantidad de xi
 x <- 1:50
@@ -855,76 +810,71 @@ for(j in 1:m){
     x[i] <- rnorm(1,0,1)
   xx[j] <- sum(x^2)
 }
-hist(xx, breaks = 15)
+ggplot(data.frame(var = xx), aes(var)) + geom_histogram(aes(y = ..density..), binwidth=3, colour = "darkblue", fill = "blue", alpha = 0.5) + xlim(min(xx), max(xx)) + geom_density(fill = 'yellow', alpha = 0.3) + ggtitle('Variables Normales')
 
 
 ###################################################
-### code chunk number 105: Documento.Rnw:1185-1186
+### code chunk number 98: Documento.Rnw:1208-1210
 ###################################################
-hist(rgamma(m,n/2,1/2), breaks = 15)
+x <- data.frame(var = rgamma(m,n/2,1/2))
+ggplot(x, aes(var)) + geom_histogram(aes(y = ..density..), binwidth=3, colour = "darkblue", fill = "blue", alpha = 0.5) + xlim(min(x$var), max(x$var)) + geom_density(fill = 'yellow', alpha = 0.3) + ggtitle('Distr. Gamma')
 
 
 ###################################################
-### code chunk number 106: Documento.Rnw:1199-1203
+### code chunk number 99: Documento.Rnw:1223-1226
 ###################################################
 xA <- rbinom(1000, 26, 0.4)
-mean(xA)
-var(xA)
+mean(xA); var(xA)
 hist(xA)
 
 
 ###################################################
-### code chunk number 107: Documento.Rnw:1205-1209
+### code chunk number 100: Documento.Rnw:1228-1231
 ###################################################
 xB <- rbinom(1000, 18, 0.7)
-mean(xB)
-var(xB)
+mean(xB); var(xB)
 hist(xB)
 
 
 ###################################################
-### code chunk number 108: Documento.Rnw:1214-1218
+### code chunk number 101: Documento.Rnw:1236-1239
 ###################################################
 xA <- rnorm(1000, 10.4, sqrt(6.24))
-mean(xA)
-var(xA)
+mean(xA); var(xA)
 hist(xA)
 
 
 ###################################################
-### code chunk number 109: Documento.Rnw:1220-1224
+### code chunk number 102: Documento.Rnw:1241-1244
 ###################################################
 xB <- rnorm(1000, 12.6, sqrt(3.78))
-mean(xB)
-var(xB)
+mean(xB); var(xB)
 hist(xB)
 
 
 ###################################################
-### code chunk number 110: Documento.Rnw:1229-1235
+### code chunk number 103: Documento.Rnw:1249-1253
 ###################################################
 xZ <- rnorm(1000, 23, sqrt(10.02))
-mean(xZ)
-mean(xA + xB)
-var(xZ)
-var(xA + xB)
+mean(xZ); mean(xA + xB)
+var(xZ); var(xA + xB)
 hist(xZ)
 
 
 ###################################################
-### code chunk number 111: Documento.Rnw:1237-1238
+### code chunk number 104: Documento.Rnw:1255-1256
 ###################################################
 hist(xA + xB)
 
 
 ###################################################
-### code chunk number 112: Documento.Rnw:1255-1256
+### code chunk number 105: Documento.Rnw:1273-1274
 ###################################################
 rm(list=ls())
 
 
 ###################################################
-### code chunk number 113: Documento.Rnw:1284-1288
+### code chunk number 106: Documento.Rnw:1302-1306
 ###################################################
 X <- rbinom(1000, 200, 1/10)
 hist(X)
@@ -933,37 +883,37 @@ mean(X)/120 # cota
 
 
 ###################################################
-### code chunk number 114: Documento.Rnw:1295-1296
+### code chunk number 107: Documento.Rnw:1313-1314
 ###################################################
 pbinom(120, 200, 1/10, lower.tail = FALSE) # P(X > 120)
 
 
 ###################################################
-### code chunk number 115: Documento.Rnw:1311-1312
+### code chunk number 108: Documento.Rnw:1329-1330
 ###################################################
 sd(X)^2 / (120 - mean(X))^2
 
 
 ###################################################
-### code chunk number 116: Documento.Rnw:1335-1336
+### code chunk number 109: Documento.Rnw:1353-1354
 ###################################################
 hist(rnorm(1000, 5, 0.1), breaks = seq(from = 4.6, to = 5.4, by = 0.02))
 
 
 ###################################################
-### code chunk number 117: Documento.Rnw:1338-1339
+### code chunk number 110: Documento.Rnw:1356-1357
 ###################################################
 hist(rnorm(1000, 5, 0.01), breaks = seq(from = 4.6, to = 5.4, by = 0.01))
 
 
 ###################################################
-### code chunk number 118: Documento.Rnw:1341-1342
+### code chunk number 111: Documento.Rnw:1359-1360
 ###################################################
 hist(rnorm(1000, 5, 0.001), breaks = seq(from = 4.6, to = 5.4, by = 0.01))
 
 
 ###################################################
-### code chunk number 119: Documento.Rnw:1363-1369
+### code chunk number 112: Documento.Rnw:1381-1387
 ###################################################
 n <- 5
 pnorm(.5*sqrt(n)/2) - pnorm(-.5*sqrt(n)/2)
@@ -974,7 +924,7 @@ pnorm(.5*sqrt(n)/2) - pnorm(-.5*sqrt(n)/2)
 
 
 ###################################################
-### code chunk number 120: Documento.Rnw:1378-1381
+### code chunk number 113: Documento.Rnw:1396-1399
 ###################################################
 n <- 320
 pnorm(.5*sqrt(n)/2) - pnorm(-.5*sqrt(n)/2)
@@ -982,7 +932,7 @@ pcauchy(.5*sqrt(n)/2) - pcauchy(-.5*sqrt(n)/2) # checar xq q raro!!
 
 
 ###################################################
-### code chunk number 121: Documento.Rnw:1401-1406
+### code chunk number 114: Documento.Rnw:1419-1424
 ###################################################
 n <- 1:100
 x <- rnorm(100, 68, 3.5)
@@ -992,25 +942,25 @@ plot(mu, xlab="n", ylim = c(60,70), type="l")
 
 
 ###################################################
-### code chunk number 122: Documento.Rnw:1445-1446
+### code chunk number 115: Documento.Rnw:1463-1464
 ###################################################
 rm(list=ls())
 
 
 ###################################################
-### code chunk number 123: Documento.Rnw:1460-1461
+### code chunk number 116: Documento.Rnw:1478-1479
 ###################################################
 library(ggplot2)
 
 
 ###################################################
-### code chunk number 124: Documento.Rnw:1466-1467
+### code chunk number 117: Documento.Rnw:1484-1485
 ###################################################
 head(mtcars)
 
 
 ###################################################
-### code chunk number 125: Documento.Rnw:1472-1475
+### code chunk number 118: Documento.Rnw:1490-1493
 ###################################################
 mtcars$gear <- factor(mtcars$gear,levels=c(3,4,5), labels=c("3gears","4gears","5gears")) 
 mtcars$am <- factor(mtcars$am,levels=c(0,1), labels=c("Automatic","Manual")) 
@@ -1018,38 +968,38 @@ mtcars$cyl <- factor(mtcars$cyl,levels=c(4,6,8), labels=c("4cyl","6cyl","8cyl"))
 
 
 ###################################################
-### code chunk number 126: Documento.Rnw:1481-1482
+### code chunk number 119: Documento.Rnw:1499-1500
 ###################################################
 qplot(mpg, data=mtcars, geom="density", fill=gear, alpha=I(.5), main="distribuci\'on de Millaje de Gasolina", xlab="Millas Por gal\'on", ylab="Densidad")
 
 
 ###################################################
-### code chunk number 127: Documento.Rnw:1487-1488
+### code chunk number 120: Documento.Rnw:1505-1506
 ###################################################
 qplot(hp, mpg, data=mtcars, shape=am, color=am, facets=gear~cyl, size=I(3), xlab="Caballos de Fuerza", ylab="Millas por gal\'on") 
 
 
 ###################################################
-### code chunk number 128: Documento.Rnw:1493-1494
+### code chunk number 121: Documento.Rnw:1511-1512
 ###################################################
 qplot(wt, mpg, data=mtcars, geom=c("point", "smooth"), method="lm", formula=y~x, color=cyl, main="Regresion de MPG con peso", xlab="Peso", ylab="Millas por gal\'on")
 
 
 ###################################################
-### code chunk number 129: Documento.Rnw:1499-1500
+### code chunk number 122: Documento.Rnw:1517-1518
 ###################################################
 qplot(gear, mpg, data=mtcars, geom=c("boxplot", "jitter"), fill=gear, main="Millage por Cantidad de Engranjes", xlab="", ylab="Millas per gal\'on")
 
 
 ###################################################
-### code chunk number 130: Documento.Rnw:1509-1511
+### code chunk number 123: Documento.Rnw:1527-1529
 ###################################################
 x <- runif(10000) # se generan 1000 variables pseudo-aleatorias uniformes
 hist(x) # histograma de las variables aleatorias
 
 
 ###################################################
-### code chunk number 131: Documento.Rnw:1516-1523
+### code chunk number 124: Documento.Rnw:1534-1541
 ###################################################
 m1 <- function(n,x,a,c,M){
   for(i in 1:n){
@@ -1061,11 +1011,9 @@ m1 <- function(n,x,a,c,M){
 
 
 ###################################################
-### code chunk number 132: Documento.Rnw:1528-1530
+### code chunk number 125: Documento.Rnw:1546-1548
 ###################################################
 x0 <- m1(50,1e-83,7,7,2^32-1)
 plot(c(1:50),x0,type="l")
-
-
 
 
